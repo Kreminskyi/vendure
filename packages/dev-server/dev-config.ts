@@ -141,18 +141,18 @@ export const devConfig: VendureConfig = {
 };
 
 function getDbConfig(): ConnectionOptions {
-    const dbType = process.env.DB || 'mysql';
+    const dbType = process.env.DB || 'postgres';
     switch (dbType) {
         case 'postgres':
             console.log('Using postgres connection');
             return {
                 synchronize: true,
                 type: 'postgres',
-                host: '127.0.0.1',
+                host: 'ec2-54-228-99-58.eu-west-1.compute.amazonaws.com',
                 port: 5432,
-                username: 'admin',
-                password: 'secret',
-                database: 'vendure-dev',
+                username: 'gagwmnsnbagdbv',
+                password: '49bd4c425912c837514715eb403344a04db1e1767b38e16887b1c90f0e640858',
+                database: 'd48v91gqjqhdd0',
             };
         case 'sqlite':
             console.log('Using sqlite connection');
